@@ -25,4 +25,4 @@ Finally, to serve the file, I spun up a quick Python HTTP server and hosted it o
 ![Python HTTP Server](images/WINDOWS%20PORT%209999.png)  
 ![Resume Downloaded](images/RESUME%20DOWNLOADED.png)
 
-This first session gave me a good feel for switching network modes, testing connectivity, seeing exposed services, and even building my first mock payload for controlled testing. It’s all isolated and purely for learning, but it’s already teaching me how attackers think and what defenders need to look out for.
+The first day ended day for me as i was experincing with the Malware, i releasied Windows 11 did not support RDP. I will be experimenting more attacks and using Blue Team apps soon. 
