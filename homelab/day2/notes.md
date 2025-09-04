@@ -56,4 +56,3 @@ Day 2 was a bit of a grind with misconfigurations and failed installs, but I lea
 ---
 
 👉 Tomorrow, I’ll move on to installing agents and connecting them to Wazuh for log collection.  
-
