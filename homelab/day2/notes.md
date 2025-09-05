@@ -10,7 +10,7 @@ Today I spent most of the day setting up the core stack on my cloud droplets. I 
 To start the day, I reviewed the overall design of my setup and how the services interact with each other.  
 The diagram below shows the relationship between **Wazuh**, **TheHive**, **Elasticsearch**, and **Cassandra**, along with how agents will later connect.  
 
-![Wazuh & TheHive Diagram](09wazuhthehiveshufflediagram.jpg)  
+![Wazuh & TheHive Diagram](images/09wazuhthehiveshufflediagram.jpg)  
 
 I started with **Wazuh**, running the installation script and configuring the manager. The install went mostly fine, and I was able to access the Wazuh dashboard after the setup.  
 
