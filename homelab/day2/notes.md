@@ -45,7 +45,7 @@ At this point:
 
 I also reviewed firewall rules to make sure my droplets were properly locked down and only the required ports were open.  
 
-![Firewall Rules](images/10firewallrules.png)  
+![Firewall Rules](images/firewallrules.png)  
 
 ---
 
