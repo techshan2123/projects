@@ -8,13 +8,13 @@ Today I spent most of the day setting up the core stack on my cloud droplets. I 
 
 I started with **Wazuh**, running the installation script and configuring the manager. The install went mostly fine, and I was able to access the Wazuh dashboard after the setup.  
 
-![Wazuh Install](01installingwazuh.png)  
-![Wazuh Dashboard](02wazuhdashboard.png)  
+![Wazuh Install](images/01installingwazuh.png)  
+![Wazuh Dashboard](images/02wazuhdashboard.png)  
 
 Next, I moved on to **Cassandra** and **Elasticsearch** since they are required dependencies for TheHive. Cassandra configured without much issue, and Elasticsearch initially looked fine.  
 
-![Cassandra Config](04cassandraconfig.png)  
-![Elasticsearch & Cassandra Status](05elasticsearchcassandrastatus.png)  
+![Cassandra Config](images/04cassandraconfig.png)  
+![Elasticsearch & Cassandra Status](images/05elasticsearchcassandrastatus.png)  
 
 ---
 
@@ -22,7 +22,7 @@ Next, I moved on to **Cassandra** and **Elasticsearch** since they are required 
 
 The real problems came when I tried to run **TheHive**. The service wouldn’t start properly, and I kept running into errors during installation.  
 
-![TheHive Install Error](03thehiveinstallerror.png)  
+![TheHive Install Error](images/03thehiveinstallerror.png)  
 
 After troubleshooting, I realised the root cause was the **Java version** — my droplets had an older version installed, and TheHive simply refused to run with it. I had to upgrade Java and reinstall TheHive from scratch.  
 
@@ -32,7 +32,7 @@ After troubleshooting, I realised the root cause was the **Java version** — my
 
 Once I reinstalled TheHive with the correct Java version, the service finally launched successfully.  
 
-![TheHive Running](07thehiveservicerunning.png)  
+![TheHive Running](images/07thehiveservicerunning.png)  
 
 At this point:  
 - Wazuh is installed and working, but no agents are connected yet.  
@@ -45,7 +45,7 @@ At this point:
 
 I also reviewed firewall rules to make sure my droplets were properly locked down and only the required ports were open.  
 
-![Firewall Rules](10firewallrules.png)  
+![Firewall Rules](images/10firewallrules.png)  
 
 ---
 
