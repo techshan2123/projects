@@ -8,13 +8,13 @@ Today I spent most of the day setting up the core stack on my cloud droplets. I 
 
 I started with **Wazuh**, running the installation script and configuring the manager. The install went mostly fine, and I was able to access the Wazuh dashboard after the setup.  
 
-![Wazuh Install](01_installing_wazuh.png)  
-![Wazuh Dashboard](02_wazuh_dashboard.png)  
+![Wazuh Install](01installingwazuh.png)  
+![Wazuh Dashboard](02wazuhdashboard.png)  
 
 Next, I moved on to **Cassandra** and **Elasticsearch** since they are required dependencies for TheHive. Cassandra configured without much issue, and Elasticsearch initially looked fine.  
 
-![Cassandra Config](04_cassandra_config.png)  
-![Elasticsearch & Cassandra Status](05_elasticsearch_cassandra_status.png)  
+![Cassandra Config](04cassandraconfig.png)  
+![Elasticsearch & Cassandra Status](05elasticsearchcassandrastatus.png)  
 
 ---
 
@@ -22,7 +22,7 @@ Next, I moved on to **Cassandra** and **Elasticsearch** since they are required 
 
 The real problems came when I tried to run **TheHive**. The service wouldn’t start properly, and I kept running into errors during installation.  
 
-![TheHive Install Error](03_thehive_install_error.png)  
+![TheHive Install Error](03thehiveinstallerror.png)  
 
 After troubleshooting, I realised the root cause was the **Java version** — my droplets had an older version installed, and TheHive simply refused to run with it. I had to upgrade Java and reinstall TheHive from scratch.  
 
@@ -32,7 +32,7 @@ After troubleshooting, I realised the root cause was the **Java version** — my
 
 Once I reinstalled TheHive with the correct Java version, the service finally launched successfully.  
 
-![TheHive Running](07_thehive_service_running.png)  
+![TheHive Running](07thehiveservicerunning.png)  
 
 At this point:  
 - Wazuh is installed and working, but no agents are connected yet.  
@@ -45,7 +45,7 @@ At this point:
 
 I also reviewed firewall rules to make sure my droplets were properly locked down and only the required ports were open.  
 
-![Firewall Rules](10_firewall_rules.png)  
+![Firewall Rules](10firewallrules.png)  
 
 ---
 
